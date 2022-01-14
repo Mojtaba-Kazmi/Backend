@@ -1,10 +1,11 @@
 const http = require('http');
-const server = http.createServer((req,res ) => {
+const app = require('./app');
 
-    res.end(" practising jiger!");
+app.set('port', process.env.PORT || 3000);
+
+const server = http.createServer(app);
 
 
-});
 
 server.listen(process.env.PORT || 3000);
 
