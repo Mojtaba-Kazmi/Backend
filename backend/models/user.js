@@ -5,7 +5,7 @@ const uniqueValidator = require("mongoose-unique-validator");
 
 //Created a data schema
 const userSchema = mongoose.Schema({
-	email: { type: String, required: true, unique: true, match: /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/ },
+	email: { type: String, required: true, unique: true },
 	password: { type: String, required: true },
 });
 
