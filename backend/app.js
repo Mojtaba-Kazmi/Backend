@@ -1,10 +1,16 @@
 const express = require('express'); 
 const mongoose = require('mongoose'); 
 const helmet = require('helmet');
+const path = require("path");
+
+const nocache = require("nocache");
 const dotenv = require('dotenv');
 dotenv.config();
 
+
+
 const userRoutes = require('./routes/user');
+const routeSauce = require("./routes/sauce");
 
 
 //configurated mongoose with the online account
@@ -16,6 +22,7 @@ mongoose.connect(process.env.SECRET_DB,
 
 const app = express(); //Called express method to create express application.
 app.use(helmet());
+app.use(nocache());
 
 
 //Interacting with resources from a different origin
@@ -28,6 +35,9 @@ app.use((req, res, next) => {
 
 app.use(express.json()); //recognizing the incoming Request Object as a JSON Object.
 
+app.use("/api/sauces", routeSauce);
 app.use('/api/auth', userRoutes);
+
+app.use("/images", express.static(path.join(__dirname, "images")));
 
 module.exports = app; //Exportation of our files
