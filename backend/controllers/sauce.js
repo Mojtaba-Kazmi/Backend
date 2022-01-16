@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const Sauce = require("../models/Sauce");
+=======
+const Sauce = require("../models/sauce");
+>>>>>>> c3b01109f8d86ea8e404f22098859dee29f0e1a7
 const fs = require('fs');
 
 exports.getAllSauces = (req, res, next) => {

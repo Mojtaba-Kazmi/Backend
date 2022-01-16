@@ -28,7 +28,10 @@
     "mongoose-unique-validator": "^3.0.0",
     "multer": "^1.4.4",
     "nocache": "^3.0.1",
+<<<<<<< HEAD
     "password-validator": "^5.2.1",
+=======
+>>>>>>> c3b01109f8d86ea8e404f22098859dee29f0e1a7
     "react-helmet": "^6.1.0"
   }
 }
