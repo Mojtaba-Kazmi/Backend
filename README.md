@@ -1,4 +1,4 @@
-# KAZMISaidMojtaba_06_14012022
+# Projet 06 Openclassrooms
 # Installation for the frontend
 Here are the dependancies you need to install:
 
